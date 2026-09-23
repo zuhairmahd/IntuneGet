@@ -48,6 +48,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Copy Supabase migrations (for reference)
 COPY --from=builder /app/supabase ./supabase
 
+RUN mkdir -p /data && chown nextjs:nodejs /data
 USER nextjs
 
 EXPOSE 3000

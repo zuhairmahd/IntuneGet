@@ -70,3 +70,4 @@ packager/.env.*
 
 # Catalog snapshot runtime artifacts
 /data/
+.env
